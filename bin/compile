@@ -81,8 +81,8 @@ if [ -d "$CARGO_HOME" ]; then
     echo "-----> Checking for new releases of Rust $VERSION channel"
     # It's possible that $VERSION has changed, or the `stable` channel has updated.
     rustup self update
-    rustup update "$VERSION"
-    rustup default "$VERSION"
+    rustup update "1.15"
+    rustup default "1.15"
 else
     echo "-----> Downloading rustup"
     curl https://sh.rustup.rs -sSf > rustup.sh
